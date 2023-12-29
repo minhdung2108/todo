@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --pink: #ec4899;
+    --purple: #1f6eaf;
+    --grey: #e8e6e6;
+    --darker-grey: #83aabc;
+    --darkest-grey: #2b5365;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Utility-classess */
+.flex{
+    display: flex;
+}
+
+body{
+    background-color: rgb(47, 152, 201);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 80vw;
+    margin: auto;
+}
+
+/* Header */
+.header{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: start;
+}
+
+h1{
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.task-form{
+    gap: 50px;
+}
+
+#new-task-input{
+    background-color: var(--darkest-grey);
+    color: var(--grey);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    flex: 70%;
+}
+
+#new-task-input::placeholder{
+    color: var(--darker-grey);
+}
+
+.btn{
+    background-color: inherit;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Task List */
+.task-list{
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+#tasks{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task{
+    justify-content: space-between;
+    background-color: var(--darkest-grey);
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.content input{
+    background-color: inherit;
+    outline: none;
+    border: 0;
+    color: var(--grey);
+    font-size: 1.2rem;
+    width: 100%;
+    overflow:hidden;
+    flex-basis: 80%;
+}
+
+.actions{
+    gap: 30px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 90vw;
+    }   
+}
+@media screen and (max-width: 700px) {
+    .container{
+        width: 95vw;
+    }   
+}
+
+@media screen and (max-width: 615px) {
+    .task-form{
+        flex-direction: column;
+        gap: 30px;
+        margin: 0;
+    }
+
+    .task{
+        padding: 5px 10px;
+    }
+
+    #new-task-input {
+        padding: 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .task{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #new-task-input,
+    .btn,
+    .content input{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+}
+fonts.googleapis.com
